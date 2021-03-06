@@ -1,6 +1,6 @@
-# Lightweight sUSDC-G Explorer
+# Lightweight sNGN-G Explorer
 
-This is a lightweight sUSDC-G explorer that runs without db. It just grabs data from Luniverse using web3.js. Based off code from https://github.com/AlanVerbner/lightweight-eth-explorer
+This is a lightweight sNGN-G explorer that runs without db. It just grabs data from Luniverse using web3.js. Based off code from https://github.com/AlanVerbner/lightweight-eth-explorer
 
 ## Getting Started
 1. Clone to local 
@@ -11,5 +11,5 @@ This is a lightweight sUSDC-G explorer that runs without db. It just grabs data 
 6. Browse to http://localhost:3000
 
 ## Example URLs:
-* Wallet with sUSDC-G balance: http://localhost:3000/account/0x83a093d78639f4d024cb5130be88561d1acc61b0
-* Transaction with sUSDC-G transfer: http://localhost:3000/transaction/0x280900fd1264645210cf224b91c24f5040dc4d5f80b5aa94a075a7773c943c12
+* Wallet with sNGN-G balance: http://localhost:3000/account/0xf04349B4A760F5Aed02131e0dAA9bB99a1d1d1e5
+* Transaction with sNGN-G transfer: http://localhost:3000/transaction/0x2940075cd13686e9cbf21cf0137345a45293fda25cf24e18f43d04a5feb53a42

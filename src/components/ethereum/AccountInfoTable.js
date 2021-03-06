@@ -16,7 +16,7 @@ const AccountInfoTable = ({ account }) => {
       balance = balance.div(10**decimals);
       console.log(balance.toString());
       var span = document.getElementById("tokenBal");
-      span.textContent = balance.toString() + " sUSDC-G";
+      span.textContent = balance.toString() + " sNGN-G";
     });
   });
   return (
@@ -33,7 +33,7 @@ const AccountInfoTable = ({ account }) => {
         </tr>
         <tr>
           <td>Token Balance</td>
-          <td><span id="tokenBal">0 sUSDC-G</span></td>
+          <td><span id="tokenBal">0 sNGN-G</span></td>
         </tr>
         <tr>
             <td>Transaction Count <em>(# of outgoing TXs)</em></td>
