@@ -43,8 +43,8 @@ class Status extends Component {
   async loadStatus(web3) {
     const [latestBlockNumber, node, network, host] = await Promise.all([
       promisify(web3.eth.getBlockNumber)(),
-      promisify(web3.version.getNode)(),
-      promisify(web3.version.getNetwork)(),
+      promisify(web3.eth.getNodeInfo)(),
+      promisify(web3.eth.net.getNetworkType)(),
       Promise.resolve(web3.currentProvider.host)
     ]);
     this.setState({

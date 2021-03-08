@@ -8,12 +8,19 @@ const AccountInfoTable = ({ account }) => {
   let tokenAddress = appSettings.TOKEN_CONTRACT;
   let walletAddress = account.address;
   // Get ERC20 Token contract instance
-  let contract = web3.eth.contract(JSON.parse(appSettings.SIDECHAIN_ABI)).at(tokenAddress);
-  contract.balanceOf(walletAddress, (error, balance) => {
+  let contract = new web3.eth.Contract(JSON.parse(appSettings.SIDECHAIN_ABI), tokenAddress);
+  contract.methods.balanceOf(walletAddress).call((error, balance) => {
     // Get decimals
-    contract.decimals((error, decimals) => {
+    contract.methods.decimals().call((error, decimals) => {
+      console.log(balance);
+      console.log(decimals);
       // calculate a balance
-      balance = balance.div(10**decimals);
+      if(balance > 0) {
+        balance = balance / (10 ** decimals);
+      }
+      else {
+        balance = 0;
+      }
       console.log(balance.toString());
       var span = document.getElementById("tokenBal");
       span.textContent = balance.toString() + " sNGN-G";

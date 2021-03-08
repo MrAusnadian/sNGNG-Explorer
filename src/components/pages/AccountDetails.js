@@ -21,7 +21,7 @@ class AccountDetails extends Component {
     this.setState({
       account: {
         address: address,
-        balance: web3.fromWei(accountResult[0], 'ether'),
+        balance: web3.utils.fromWei(accountResult[0], 'ether'),
         code: accountResult[1],
         transactionCount: accountResult[2]
       }

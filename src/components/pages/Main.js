@@ -57,7 +57,7 @@ class Main extends Component {
   componentWillMount() {
     const eth = this.props.web3.eth;
     this.loadBlocks(eth);
-    eth.filter("latest", function(err, res){
+    eth.subscribe('latest', function(err, res){
       this.loadBlocks(eth);
     }.bind(this));
   }
