@@ -8,7 +8,7 @@ const StatusTable = ({latestBlockNumber, node, network, host, isConnected}) => {
     <table className="pure-table pure-table-horizontal">
       <thead>
           <tr>
-            <th colSpan="2">Sidechain NGN Gluwacoin Explorer (Sandbox)</th>
+            <th colSpan="2">Sidechain NGN Gluwacoin Explorer</th>
           </tr>
       </thead>
       <tbody>
